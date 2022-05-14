@@ -1,0 +1,27 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node calculator.js",
+    "test": "jest calculator.test.js",
+    "test:local": "node calculator.test.js"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|js?|mjs?|tsx?|ts?)$",
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "mjs"
+    ]
+  },
+  "dependencies": {
+    "math": "1.0.0",
+    "test": "1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}

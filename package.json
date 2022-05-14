@@ -1,5 +1,9 @@
 {
   "name": "testing",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "jest": "^28.1.0"
+  "dependencies": {
+    "ts-jest": "^28.0.2"
   }
 }

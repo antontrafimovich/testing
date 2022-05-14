@@ -1,6 +1,6 @@
-import { errorLog, successLog } from "./logger.mjs";
+const { errorLog, successLog } = require("utils");
 
-export const expect = (actual) => {
+const expect = (actual) => {
   return {
     toBe(expected) {
       if (actual !== expected) {
@@ -10,7 +10,7 @@ export const expect = (actual) => {
   };
 };
 
-export const spyOn = (object, prop) => {
+const spyOn = (object, prop) => {
   const prevFn = object[prop];
 
   Object.defineProperty(object[prop], "mockImplementation", {
@@ -28,7 +28,7 @@ export const spyOn = (object, prop) => {
   });
 };
 
-export const fn = (impl) => {
+const fn = (impl) => {
   const mockFn = (...args) => {
     mockFn.mock.calls.push(args);
     return impl(...args);
@@ -38,7 +38,7 @@ export const fn = (impl) => {
   return mockFn;
 };
 
-export const test = async (title, callback) => {
+const test = async (title, callback) => {
   try {
     await callback();
     successLog(`${title}`);
@@ -47,3 +47,5 @@ export const test = async (title, callback) => {
     console.error(err);
   }
 };
+
+module.exports = { spyOn, test, fn, expect };
