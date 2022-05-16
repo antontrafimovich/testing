@@ -1,21 +1,20 @@
-const Math = require("math");
+const { sum } = require("math");
 // import { expect, fn, test } from "../test/test.mjs";
 // import jest from "jest";
 const { getSumOfPairs } = require("./calculator");
 
-test("Calculator pairs sum works", () => {
-  console.log(Math);
-  jest.spyOn(Math, "sum");
-  Math.sum.mockImplementation((v1, v2) => v1);
+jest.mock("math");
 
+test("Calculator pairs sum works", () => {
   const data = [
     [1, 2],
     [3, 4],
   ];
 
   const result = getSumOfPairs(data);
-  console.log(Math.sum.mock.calls);
 
   expect(result).toBe(4);
-  expect(Math.sum.mock.calls.length).toBe(2);
+  expect(sum.mock.calls.length).toBe(2);
+
+  sum.mockRestore();
 });
