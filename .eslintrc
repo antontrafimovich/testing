@@ -1,0 +1,14 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "extends": ["eslint:recommended", "eslint-config-prettier"],
+  "rules": {
+    "no-unused-vars": "warn"
+  },
+  "env": {
+    "node": true,
+    "jest": true
+  }
+}

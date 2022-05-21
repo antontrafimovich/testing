@@ -4,7 +4,8 @@
   "scripts": {
     "start": "node calculator.js",
     "test": "jest calculator.test.js",
-    "test:local": "node calculator.test.js"
+    "test:local": "node calculator.test.js",
+    "lint": "eslint ."
   },
   "jest": {
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|js?|mjs?|tsx?|ts?)$",
