@@ -2,6 +2,7 @@
   "name": "calculator",
   "version": "1.0.0",
   "scripts": {
+    "build": "babel ./ --extensions .js,.ts --out-dir dist",
     "start": "node calculator.js",
     "test": "jest calculator.test.js",
     "test:local": "node calculator.test.js",

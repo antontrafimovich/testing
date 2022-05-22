@@ -1,9 +1,12 @@
 {
   "name": "math",
   "version": "1.0.0",
+  "scripts": {
+    "build": "babel src --out-dir dist"
+  },
   "exports": {
     ".": {
-      "require": "./math.js"
+      "require": "./src/math.js"
     }
   }
 }
