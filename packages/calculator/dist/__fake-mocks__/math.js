@@ -1,9 +1,7 @@
 "use strict";
 
-const {
-  fn
-} = require("test");
+const { fn } = require("test");
 
 module.exports = {
-  sum: fn((v1, v2) => v1)
+  sum: fn((v1, v2) => v1),
 };
